@@ -1,0 +1,78 @@
+/* normalizers */
+* {
+    box-sizing: border-box;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+    border: none;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+    -webkit-appearance: button;
+}
+
+/* structure */
+.flex {
+    display: flex;
+}
+
+.container {
+    max-width: 1100;
+    margin: 0 auto;
+}
+
+.justify {
+    justify-content: space-between;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.align {
+    align-items: center;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+/* structure */
+.spacer {
+    width: 100%;
+    height: 100px;
+}
+
+.cat-ctn {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* media queries */
+@media only screen and (min-width: 400px) {
+
+}
+
+@media only screen and (min-width: 600px) {
+    
+}
+
+@media only screen and (min-width: 800px) {
+    
+}
+
+@media only screen and (min-width: 1000px) {
+    
+}
