@@ -28,6 +28,7 @@ window.addEventListener('DOMContentLoaded', () => {
         <div class="cat-block">
             <div class="cat-inner">
                 <div class="cat-icon">
+                <div class="cat-name">${cat.name}</div>
                     <img src="${cat.imgSrc}" alt="${cat.altAtt}" width="200" height="auto">
                 </div>
                 <div class="counter">0</div>
