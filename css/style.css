@@ -23,6 +23,14 @@ button,
     -webkit-appearance: button;
 }
 
+ul {
+    list-style: none;
+}
+
+li {
+    margin: 0;
+}
+
 /* structure */
 .flex {
     display: flex;
@@ -53,12 +61,6 @@ button,
 .spacer {
     width: 100%;
     height: 100px;
-}
-
-.cat-block {
-    border: 1px solid #ccc;
-    padding: 20px;
-    border-radius: 5px;
 }
 
 /* media queries */
