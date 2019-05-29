@@ -63,6 +63,14 @@ li {
     height: 100px;
 }
 
+.li-cat {
+    margin-bottom: 5px;
+}
+
+.li-cat:last-child {
+    margin-bottom: 0;
+}
+
 /* media queries */
 @media only screen and (min-width: 400px) {
 

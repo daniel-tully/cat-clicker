@@ -27,7 +27,7 @@ window.addEventListener('DOMContentLoaded', () => {
     for(cat of cats) {
         const catLi = document.createElement('LI');
 
-        catLi.className = "bg-light p-2 mb-1 border border-dark rounded";
+        catLi.className = "li-cat bg-white p-2 rounded";
 
         catLi.innerText = `${cat.name}`;
 
@@ -35,33 +35,36 @@ window.addEventListener('DOMContentLoaded', () => {
         catLi.addEventListener('click', ((thisCat) => {
             return function() {
                 catCtn.innerHTML = `<!-- cat -->
-                <div class="cat-block container-fluid">
+                <div class="cat-block container-fluid p-0">
                     <div class="cat-inner">
                         <div class="cat-icon">
-                        <div class="row justify-content-between">
-                            <div class="cat-name">${thisCat.name}</div>
-                            <div class="counter">${thisCat.clicks}</div>
+                        <div class="container-fluid">
+                            <div class="row justify-content-between">
+                                <div class="cat-name">${thisCat.name}</div>
+                                <div class="counter">${thisCat.clicks}</div>
+                            </div>
                         </div>
                         <img src="${thisCat.imgSrc}" alt="${thisCat.altAtt}" width="100%" height="auto">
                         </div>
                     </div>
                 </div>`;
 
-                console.log(thisCat.clicks);
-                // click listener for cat counter
-                catCtn.addEventListener('click', () => {
-                    const counter = catCtn.querySelector('.counter');
-
-                    console.log(thisCat.clicks);
-
-                    thisCat.clicks = thisCat.clicks += 1;
-                    counter.innerText = thisCat.clicks;
-                });
-
-                
             }
         })(cat));
 
         listCtn.appendChild(catLi);
+    }
+});
+
+// add counter to open cat container
+catCtn.addEventListener('click', () => {
+    let openCatTitle = catCtn.querySelector('.cat-name').innerText;
+
+    for(cat of cats) {
+        if (openCatTitle === cat.name) {
+            const counter = catCtn.querySelector('.counter');
+            cat.clicks = cat.clicks += 1;
+            counter.innerText = cat.clicks;
+        }
     }
 });
