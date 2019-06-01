@@ -11,16 +11,44 @@
 <body class="bg-light">
     <div class="spacer"></div>
     <div class="container-fluid">
-        <div class="container mx-auto text-center mb-3 mb-md-5">
-            <h1 class="h5">Cat Clicker Premium</h1>
+        <div class="container mx-auto mb-3 mb-md-5">
+            <div class="bg-dark p-3 text-white">
+                <h1 class="h2 m-0">Cat Clicker Premium</h1>
+            </div>
         </div>
         <div class="list-ctn container mx-auto">
             <div class="row">
-                <ul class="cat-list col-md-3 mb-0">
-                    <!-- cat names go here -->
-                </ul>
-                <div class="cat-ctn col-md-9 bg-white rounded p-5">
-                    <!-- // inject here -->
+                <div class="sidebar col-4">
+                    <div class="cat-list mb-3">
+                        <!-- cat names go here -->
+                    </div>
+                    <button class="btn btn-primary border admin-btn">Admin</button>
+                    <div class="input-form form-group d-none">
+                        <form>
+                            <label for="input-cat-name">Cat name:</label>
+                            <input type="text" id="input-cat-name" class="form-control">
+                            <label for="input-cat-src">Cat Image URL:</label>
+                            <input type="text" id="input-cat-src" class="form-control">
+                            <label for="input-cat-clicks">Cat clicks:</label>
+                            <input type="text" id="input-cat-clicks" class="form-control">
+                            <button class="btn btn-dark">Save</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-8 cat-ctn bg-white rounded p-5">
+                    <div class="cat-block container-fluid">
+                        <div class="cat-inner">
+                            <div class="cat-icon">
+                            <div class="container-fluid">
+                                <div class="row justify-content-between">
+                                    <div class="cat-name">${openCat.name}</div>
+                                    <div class="counter">${openCat.clicks}</div>
+                                </div>
+                            </div>
+                            <img class="cat-img" width="100%" height="auto">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
