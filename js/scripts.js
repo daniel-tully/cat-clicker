@@ -90,11 +90,27 @@
 
                 // show the input form
                 inputForm.classList.remove("d-none");
-
+                
                 // add input values for open cat
                 inputForm.querySelector("#input-cat-name").value = openCat.name;
                 inputForm.querySelector("#input-cat-src").value = openCat.imgSrc;
                 inputForm.querySelector("#input-cat-clicks").value = openCat.clicks;
+                
+                // cancel the form
+                inputForm.querySelector(".cancel-btn").addEventListener("click", (e) => {
+                    e.preventDefault();
+                    inputForm.classList.add("d-none");
+                });
+                
+                // save the form
+                inputForm.querySelector(".save-btn").addEventListener("click", (e) => {
+                    e.preventDefault();
+                    openCat.name = inputForm.querySelector("#input-cat-name").value;
+                    openCat.imgSrc = inputForm.querySelector("#input-cat-src").value;
+                    openCat.clicks = inputForm.querySelector("#input-cat-clicks").value;
+                    inputForm.classList.add("d-none");
+                    openCatView.render();
+                });
             });
         },
     };
